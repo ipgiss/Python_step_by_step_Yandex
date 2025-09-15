@@ -31,23 +31,40 @@
 '''Напишите программу, которая проверит, делится ли введённое число на какое-то целое, не превышающее 9. Если делится, 
 то выведите наибольшее из таких чисел. Если не делится (деление на 1 и само число не считается), то выведите -1.'''
 
+# n = int(input())
+#
+# if n % 9 == 0 and 9 < n:
+#     print(9)
+# elif n % 8 == 0 and 8 < n:
+#     print(8)
+# elif n % 7 == 0 and 7 < n:
+#     print(7)
+# elif n % 6 == 0 and 6 < n:
+#     print(6)
+# elif n % 5 == 0 and 5 < n:
+#     print(5)
+# elif n % 4 == 0 and 4 < n:
+#     print(4)
+# elif n % 3 == 0 and 3 < n:
+#     print(3)
+# elif n % 2 == 0 and 2 < n:
+#     print(2)
+# else:
+#     print(-1)
+
+# 4 Сравнение в переменной
+'''Напишите программу, которая проверяет, является ли введённое целое число квадратом.'''
+
 n = int(input())
 
-if n % 9 == 0 and 9 < n:
-    print(9)
-elif n % 8 == 0 and 8 < n:
-    print(8)
-elif n % 7 == 0 and 7 < n:
-    print(7)
-elif n % 6 == 0 and 6 < n:
-    print(6)
-elif n % 5 == 0 and 5 < n:
-    print(5)
-elif n % 4 == 0 and 4 < n:
-    print(4)
-elif n % 3 == 0 and 3 < n:
-    print(3)
-elif n % 2 == 0 and 2 < n:
-    print(2)
+condition = round(n ** 0.5) # тут лучше округлять
+
+print(n ** 0.5)
+print(condition ** 2)
+
+if condition ** 2 == n:
+    print('Квадрат')
 else:
-    print(-1)
+    print('Не квадрат')
+
+#5
