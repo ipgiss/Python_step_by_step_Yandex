@@ -121,7 +121,35 @@
 # numbers = list(map(int, str(n)))
 # print(numbers)
 
-n2 = input()
-print(n2)
-result = list(map(int, n2.split()))
-print(result)
+# n2 = input()
+# print(n2)
+# result = list(map(int, n2.split()))
+# print(result)
+
+n = int(input())
+
+n1 = n // 1000
+n2 = (n // 100) % 10
+n3 = (n // 10) % 10
+n4 = n % 10
+total = n1 + n2 + n3 + n4
+# print(n1, n2, n3, n4)
+# print(total)
+
+found = False  # Флаг: найдена ли хоть одна подходящая цифра
+
+if total % n1 == 0:
+    print(f'Сумма цифр {n} делится на {n1}')
+    found = True
+if total % n2 == 0:
+    print(f'Сумма цифр {n} делится на {n2}')
+    found = True
+if total % n3 == 0:
+    print(f'Сумма цифр {n} делится на {n3}')
+    found = True
+if total % n4 == 0:
+    print(f'Сумма цифр {n} делится на {n4}')
+    found = True
+
+if not found: # if found = False
+    print(f'Сумма цифр {n} не делится на свои цифры.')
